@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Kozar-kontakt</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <ul class="meni">
+        <li><a href="index.html">O MENI</a></li>
+        <li><a href="projekti.html">PROJEKTI</a></li>
+        <li><a href="kontakt.html">KONTAKT</a></li>
+    </ul>
+
+
+<section class="contact">
+    <div class="contact-box">
+
+        <h2>Kontakt</h2>
+
+      
+        <div class="email-row">
+            <div class="email-left" onclick="copyEmail()">
+                <span>📧</span>
+                <p id="emailText">deakozar@email.com</p>
+            </div>
+
+           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deakozar@email.com&su=Kontakt&body=Zdravo Andrea," 
+             target="_blank" 
+             class="mail-btn"
+             onclick="event.stopPropagation()">
+             📩 Pošalji
+           </a>
+        </div>
+
+        <span id="copiedMsg">Kopirano!</span>
+
+        
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/andrea-kozar-108797395/" target="_blank">
+                🔗 LinkedIn
+            </a>
+
+            <a href="https://github.com/aandreaq" target="_blank">
+                💻 GitHub
+            </a>
+        </div>
+
+        <script>
+            function copyEmail() {
+             const email = document.getElementById("emailText").innerText;
+             navigator.clipboard.writeText(email);
+
+             const msg = document.getElementById("copiedMsg");
+             msg.style.opacity = "1";
+             
+             setTimeout(() => {
+             msg.style.opacity = "0";
+             }, 1500);
+             }
+         </script>
+
+    </div>
+</section>
+
+</body>
+</html>

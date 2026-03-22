@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Kozar-portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="meni">
+        <li><a href="index.html">O MENI</a></li>
+        <li><a href="projekti.html">PROJEKTI</a></li>
+        <li><a href="kontakt.html">KONTAKT</a></li>
+    </ul>
+    
+
+ <section class="hero">
+    <div class="hero-container">
+        <div class="hero-image">
+            <img src="images/andrea.jpeg" alt="Andrea Kozar">
+        </div>
+        <div class="hero-text">
+            <h1>Zdravo, ja sam <span>Andrea</span></h1>
+            <p>
+              
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="skills">
+    <h2>Veštine</h2>
+    <div class="skills-container">
+        <div class="skill-badge">HTML</div>
+        <div class="skill-badge">CSS</div>
+        <div class="skill-badge">JavaScript</div>
+        <div class="skill-badge">React</div>
+        <div class="skill-badge">PHP</div>
+        <div class="skill-badge">Node.js</div>
+        <div class="skill-badge">C#</div>
+        <div class="skill-badge">Java</div>
+        <div class="skill-badge">MySQL</div>
+        <div class="skill-badge">Git & GitHub</div>
+    </div>
+</section>
+
+
+<section class="experience">
+    <h2>Radno iskustvo</h2>
+    <div class="timeline">
+        <div class="timeline-item left">
+            <h3>Konobar — ButanGas</h3>
+            <span>Avgust 2022 – trenutno</span>
+            <p>Usluživanje gostiju, održavanje higijene, organizacija smene.</p>
+        </div>
+        <div class="timeline-item right">
+            <h3>Stručna praksa — Lagermax Logistics</h3>
+            <span>Jun – Avgust 2025</span>
+            <p>Rad u MySQL, Lbase, WMS.</p>
+        </div>
+        <div class="timeline-item left">
+            <h3>Prodavac — Butik</h3>
+            <span>Tokom srednje škole</span>
+            <p>Rad sa kupcima, slaganje robe, rad na kasi.</p>
+        </div>
+    </div>
+</section>
+
+ <script>
+        const text = " Strukovni inženjer informacionih tehnologija sa praktičnim iskustvom u radu sa bazama podataka i web tehnologijama. Tokom školovanja razvila sam interesovanje za moderni web razvoj i kontinuirano usavršavam znanje iz frontend i backend tehnologija.";
+        const p = document.querySelector(".hero-text p");
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                p.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 30);
+            }
+        }
+
+        typeWriter();
+    </script>
+
+</body>
+</html>
